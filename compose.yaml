@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - ./reactApp/app:/usr/src/app
+    ports:
+      - "3000:3000"
+    command: sh -c "npm i react-scripts && npm start"
